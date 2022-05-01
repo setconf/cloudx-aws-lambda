@@ -21,4 +21,4 @@ phases:
 #            --output-template-file output-template.yml"
 artifacts:
     files:
-        - output-template.yml
+        - '**/*'
