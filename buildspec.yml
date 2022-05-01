@@ -12,7 +12,6 @@ phases:
         commands:
             - echo Build started on `date`
             - ./gradlew clean build buildZip
-            - sam build
     post_build:
         commands:
             - echo Build completed on `date`
@@ -20,7 +19,7 @@ phases:
 #            --output-template-file output-template.yml'
 #            - 'sam package --template-file template.yml --s3-bucket aws-sam-cli-deployment-bucket
 #            --output-template-file output-template.yml'
-            - 'sam package --template-file .aws-sam/template.yml --s3-bucket aws-sam-cli-deployment-bucket
+            - 'sam package --template-file template.yml --s3-bucket aws-sam-cli-deployment-bucket
             --output-template-file output-template.yml'
 artifacts:
     files:
