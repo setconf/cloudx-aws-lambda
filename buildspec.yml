@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+    install:
+        runtime-versions:
+            java: corretto11
+    pre_build:
+        commands:
+            - echo Nothing to do in the pre_build phase...
+    build:
+        commands:
+            - echo Build started on `date`
+            - gradlew clean buildZip
+    post_build:
+        commands:
+            - echo Build completed on `date`
+#            - "aws cloudformation package --region us-east-1 --template-file template.yml
+#            --s3-bucket aws-sam-cli-deployment-bucket --output-template-file output-template.yml"
+            - "sam package --region us-east-1 --template-file template.yml --s3-bucket aws-sam-cli-deployment-bucket 
+            --output-template-file output-template.yml"
+artifacts:
+    files:
+        - output-template.yml
