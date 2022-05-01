@@ -20,7 +20,7 @@ phases:
 #            --output-template-file output-template.yml'
 #            - 'sam package --template-file template.yml --s3-bucket aws-sam-cli-deployment-bucket
 #            --output-template-file output-template.yml'
-            - 'sam package --template-file .cloudx-aws-lambda/template.yml --s3-bucket aws-sam-cli-deployment-bucket 
+            - 'sam package --template-file .aws-sam/template.yml --s3-bucket aws-sam-cli-deployment-bucket 
             --output-template-file output-template.yml'
 artifacts:
     files:
