@@ -11,14 +11,16 @@ phases:
         commands:
             - echo Build started on `date`
             - chmod +x gradlew
-            - ./gradlew clean buildZip
+            - ./gradlew clean build
+            - ./gradlew buildZip
+            - sam build
     post_build:
         commands:
             - echo Build completed on `date`
-#            - "aws cloudformation package --template-file template.yml --s3-bucket aws-sam-cli-deployment-bucket
-#            --output-template-file output-template.yml"
-            - "sam package --template-file template.yml --s3-bucket aws-sam-cli-deployment-bucket
-            --output-template-file output-template.yml"
+#            - 'aws cloudformation package --template-file template.yml --s3-bucket aws-sam-cli-deployment-bucket
+#            --output-template-file output-template.yml'
+            - 'sam package --template-file template.yml --s3-bucket aws-sam-cli-deployment-bucket
+            --output-template-file output-template.yml'
 artifacts:
     files:
         - output-template.yml
