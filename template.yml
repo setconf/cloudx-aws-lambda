@@ -8,7 +8,7 @@ Resources:
         Type: AWS::Serverless::Function
         Properties:
             PackageType: Zip
-            CodeUri: ./build/distributions/cloudx-aws-lambda-1.0.zip
+#            CodeUri: ./build/distributions/cloudx-aws-lambda-1.0.zip
             FunctionName: aws-demo-uploads-batch-notifier
             Role: arn:aws:iam::748895695737:role/AWSDemoLambdaRole
             Handler: com.example.aws.demo.handler.ImageProcessHandler::handleRequest

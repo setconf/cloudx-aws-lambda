@@ -11,9 +11,7 @@ phases:
         commands:
             - echo Build started on `date`
             - chmod +x gradlew
-            - ./gradlew clean build
-            - ./gradlew buildZip
-            - sam build
+            - ./gradlew clean buildZip
     post_build:
         commands:
             - echo Build completed on `date`
