@@ -6,7 +6,8 @@ phases:
             java: corretto11
     pre_build:
         commands:
-            - echo Nothing to do in the pre_build phase...
+            - echo Pre_build phase...
+            - echo Make a gradlew script executable...
             - chmod +x gradlew
     build:
         commands:
