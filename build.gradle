@@ -34,5 +34,4 @@ task buildZip(type: Zip) {
     into('lib') {
         from configurations.runtimeClasspath
     }
-    destinationDir = file("build/libs")
 }
