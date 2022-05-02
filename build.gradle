@@ -20,13 +20,13 @@ dependencies {
     implementation "com.amazonaws:aws-lambda-java-events:${amazonLambdaEventsVersion}"
 }
 
-//jar {
-//    setZip64(true)
-//
-//    manifest {
-//        attributes('name': "lambda")
-//    }
-//}
+jar {
+    setZip64(true)
+
+    manifest {
+        attributes('name': "lambda")
+    }
+}
 
 task buildZip(type: Zip) {
     from compileJava
