@@ -15,6 +15,7 @@ phases:
     post_build:
         commands:
             - echo Build completed on `date`
+            - ls -la
             - 'aws cloudformation package --template-file template.yml --s3-bucket aws-sam-cli-deployment-bucket
             --output-template-file output-template.yml --debug'
 #            - 'sam package --template-file template.yml --s3-bucket aws-sam-cli-deployment-bucket
